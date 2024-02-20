@@ -1,20 +1,32 @@
 package l24.people;
 
+import l24.animal.Animal;
+
 public class People {
-    private String name;
-    private String gender;
-    private int age;
+    public String name;
+    public String gender;
+    public int age;
 
     public People(String name, String gender, int age){
         this.gender = gender;
         this.name = name;
         this.age = age;
     }
-    public boolean equals(People people) {
-        return age == people.age && name.equals(people.name);
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj)
+            return true;
+        if (obj == null || getClass() != obj.getClass())
+            return false;
+        People people = (People) obj;
+        return age == people.age && (
+                name == null ? people.name == null :
+                        name.equals(people.name)
+        );
     }
     @Override
     public int hashCode() {
+
         return age + name.hashCode();
     }
 

@@ -2,26 +2,29 @@ package l26.Geometric_Figures;
 
 import l26.GeometricFigures;
 
-public class Parallelogram extends GeometricFigures{
+public class Triangle extends GeometricFigures{
 
-    private double side1; //длина большой полуоси
-    private double side2; //длина малой полуоси
+    private double base;
+    private double side;
+    private double height;
 
-    public Parallelogram(String color, double side1, double side2) {
+
+    public Triangle(String color, double base, double side, double height) {
         super(color);
-        this.side1 = side1;
-        this.side2 = side2;
+        this.base = base;
+        this.side = side;
+        this.height = height;
     }
 
     @Override
     public double getArea() {
 
-        return Math.PI * side1 * side2;
+        return (base * height) / 2;
     }
 
     @Override
     public double getPerimeter() {
 
-        return 2 * Math.PI;
+        return base + (side * 2);
     }
 }

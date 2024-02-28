@@ -26,7 +26,8 @@ class BookShelf {
         int index;
 
         Iterator() {
-            this.index = index;
+
+            this.index = 0;
         }
 
         public void bookIterator() {

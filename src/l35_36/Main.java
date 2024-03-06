@@ -8,7 +8,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 
-public class ListArrayList {
+public class Main {
     public static void main(String[] args) {
 
         List<Bobr> list = new ArrayList<>();

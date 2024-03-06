@@ -1,11 +1,6 @@
-package l35;
-
-import l24.animal.Animal;
+package l35_36;
 
 import java.util.Comparator;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.Map;
 
 public class Bobr implements Comparable<Bobr>{
     String name;
